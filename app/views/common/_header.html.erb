@@ -1,0 +1,33 @@
+
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <nav>
+      <button type="button", class="navbar-toggle" data-toggle='collapse' data-target='.navbar-responsive-collapse'>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav pull-right">
+                <li><%= link_to "What is Thalia？",  "#"  %></li>
+                 <% if user_signed_in? %>
+                    <li>
+                      <%= link_to "マイページ", '#' %>
+                    </li>
+                    <li>
+                      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                    </li>
+                <% else %>
+                    <li>
+                      <%= link_to "ログイン", new_user_session_path, :class => 'post' %>
+                    </li>
+                    <li>
+                      <%= link_to "新規登録", new_user_registration_path, :class => 'post' %>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+        </nav>
+    </div>
+  </div>

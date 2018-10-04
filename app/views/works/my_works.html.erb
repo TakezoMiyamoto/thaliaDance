@@ -1,5 +1,10 @@
-<% (@works).each do |snippet| %>
-  <iframe src="https://www.youtube.com/embed/<%= snippet.resourceId.videoId %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  <!-- <%= image_tag(snippet.thumbnails.medium.url)%> -->
-
+<% content_for :head do %>
+  <meta name="title" content="<%= @title %>">
+  <meta name="description" content="Works 一覧">
 <% end %>
+
+<div class="container index-work">
+    <div class="container">
+      <%= render 'works/myWorksList' , works: @works %>
+    </div>
+</div>

@@ -3,10 +3,11 @@ class WorksController < ApplicationController
 
     def index
       # get_data("formeraction")
-
+      @title = 'ワークス一覧'
+      main
     end
 
-    
+
 
     def test
       return a=1

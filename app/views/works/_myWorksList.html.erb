@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="container-inner inner-default clearfix">
+    <% works.each do |work| %>
+      <div class="item-box">
+        <div class="image">
+          <div class="img-wrap">
+              <iframe src="https://www.youtube.com/embed/<%= work.resourceId.videoId %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="detail">
+          <p class="title">
+            <%= work.title %>
+            <!-- period date -->
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
