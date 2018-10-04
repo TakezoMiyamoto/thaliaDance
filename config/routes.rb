@@ -7,6 +7,5 @@ Rails.application.routes.draw do
 
   # resources :works
   get 'works', to: 'works#index'
-
   get 'works/my_works', to: 'works#my_works'
 end

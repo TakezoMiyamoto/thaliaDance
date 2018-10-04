@@ -1,3 +1,5 @@
-<% (@works).each do |videoId| %>
- <iframe src="https://www.youtube.com/embed/<%= videoId %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<% (@works).each do |snippet| %>
+  <iframe src="https://www.youtube.com/embed/<%= snippet.resourceId.videoId %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <!-- <%= image_tag(snippet.thumbnails.medium.url)%> -->
+
 <% end %>

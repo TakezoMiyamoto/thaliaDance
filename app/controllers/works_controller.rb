@@ -3,8 +3,10 @@ class WorksController < ApplicationController
 
     def index
       # get_data("formeraction")
-      
+
     end
+
+    
 
     def test
       return a=1
@@ -55,7 +57,7 @@ class WorksController < ApplicationController
 
              # Print information about each video.
              playlistitems_response.data.items.each do |playlist_item|
-               @works << playlist_item.snippet.resourceId.videoId
+               @works << playlist_item.snippet
 
              end
 
