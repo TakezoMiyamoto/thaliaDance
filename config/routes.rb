@@ -5,5 +5,8 @@ Rails.application.routes.draw do
       :omniauth_callbacks => "users/omniauth_callbacks",
   }
 
-  resources :works
+  # resources :works
+  get 'works', to: 'works#index'
+
+  get 'works/my_works', to: 'works#my_works'
 end

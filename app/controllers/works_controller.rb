@@ -3,11 +3,15 @@ class WorksController < ApplicationController
 
     def index
       # get_data("formeraction")
-      main
+      
     end
 
     def test
       return a=1
+    end
+
+    def my_works
+        main
     end
 
 
