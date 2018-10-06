@@ -9,17 +9,27 @@ body {
     padding-top: 70px;
     margin-bottom: 120px;
     min-height: 1800px;
-    background-color: #FFF;
+    background-color: #222222;
     font-size: 15px;
     color: #292F33;
 }
 
+.header {
+  background-color: #222222;
+  border: none;
 
+}
+
+.navbar-default {
+  .navbar-nav li a {
+    color: #FFFFFF;
+  }
+}
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: #f5f5f5;
+    background-color: #222222;
     padding: 10px;
     text-align: center;
         .navbar-nav{
@@ -27,17 +37,20 @@ body {
             display: table;
             table-layout: fixed;
             float:none;
-            color: #337ab7;
+            color: #FFFFFF;
             font-size: .8em;
             letter-spacing: .225em;
             list-style: none;
+        }
+        a {
+          color: #FFFFFF;
         }
 }
 
 .jumbotron {
         margin-top: -20px;
-        margin-left: -150px;
-        margin-right: -150px;
+        margin-left: -155px;
+        margin-right: -155px;
         height: 750px;
         overflow:hidden;
         background-image: url(/dance_dark_cover.jpeg);
@@ -52,24 +65,32 @@ body {
         min-width: 240px; /* 最小幅 */
     }
     h1 {
-        font-family: 'Poiret One', cursive;
+        font-family: 'Noto Sans Japanese';
+        font-size: 78px;
+        letter-spacing: 0.15em;
         font-weight: bold;
-        margin-top: 20px;
+        margin-top: 0px;
         text-align: center;
-        color: #F6A2BF;
+        color: #FFFFFF;
     }
     p {
-        font-family: 'Poiret One', cursive;
+        font-family: 'Noto Sans Japanese';
+        font-size: 18px;
         font-weight: bold;
-        margin-top: 40px;
+        margin-top: 10px;
         text-align: center;
-        color: #F6A2BF;
+        color: #FFFFFF;
     }
 
     .btn {
         margin-top: 180px;
     }
 
+}
+
+.google-btn {
+  margin-top: 20px;
+  text-align: center;
 }
 
 @media (max-width: 767px){

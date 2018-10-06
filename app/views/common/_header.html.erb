@@ -1,5 +1,5 @@
 
-  <div class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar navbar-default navbar-fixed-top header">
     <div class="container">
       <nav>
       <button type="button", class="navbar-toggle" data-toggle='collapse' data-target='.navbar-responsive-collapse'>
@@ -10,7 +10,7 @@
 
       <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav pull-right">
-                <li><%= link_to "What is Thalia？",  "#"  %></li>
+                <li><%= link_to "What is Thalia？",  root_path  %></li>
                  <% if user_signed_in? %>
                     <li>
                       <%= link_to "My Works", works_my_works_path %>
@@ -22,7 +22,7 @@
                     <li>
                       <%= link_to "Sign Up", user_google_oauth2_omniauth_authorize_path, :class => 'post' %>
                     </li>
-                    
+
                 <% end %>
             </ul>
         </div>
