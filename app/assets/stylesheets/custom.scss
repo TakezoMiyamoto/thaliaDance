@@ -34,6 +34,52 @@ body {
         }
 }
 
+.jumbotron {
+        margin-top: -20px;
+        margin-left: -150px;
+        margin-right: -150px;
+        height: 750px;
+        overflow:hidden;
+        background-image: url(/dance_dark_cover.jpeg);
+        background-size: cover;
+        background-position: center 80%;
+        background-repeat: no-repeat;
+
+
+    .resizeimage {
+        width: 100%;
+        max-width: 500px; /* 最大幅 */
+        min-width: 240px; /* 最小幅 */
+    }
+    h1 {
+        font-family: 'Poiret One', cursive;
+        font-weight: bold;
+        margin-top: 20px;
+        text-align: center;
+        color: #F6A2BF;
+    }
+    p {
+        font-family: 'Poiret One', cursive;
+        font-weight: bold;
+        margin-top: 40px;
+        text-align: center;
+        color: #F6A2BF;
+    }
+
+    .btn {
+        margin-top: 180px;
+    }
+
+}
+
+@media (max-width: 767px){
+   .jumbotron {
+    height: 550px;
+    background-image: url(/dance_dark_cover.jpeg);
+    background-size: cover;
+   }
+}
+
 /*flash*/
 
 .alert-error {

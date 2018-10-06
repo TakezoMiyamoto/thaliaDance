@@ -7,6 +7,10 @@ class WorksController < ApplicationController
       main
     end
 
+    def show
+      #code
+    end
+
 
 
     def test
@@ -16,6 +20,25 @@ class WorksController < ApplicationController
     def my_works
         main
     end
+
+    def new
+      @work = Work.new
+      @title = '新規ワークの作成'
+    end
+
+  def create
+    @work = current_user.works.build(works_params)
+    if @work.save
+      flash[:success] = "新規Workを作成しました！"
+      redirect_to @work
+    else
+      render 'new'
+    end
+  end
+
+  def edit
+    @work = Work.find(params[:id])
+  end
 
 
 
@@ -59,6 +82,7 @@ class WorksController < ApplicationController
              # Print information about each video.
              playlistitems_response.data.items.each do |playlist_item|
                @works << playlist_item.snippet
+               puts playlist_item.snippet.resourceId.videoId
 
              end
 
@@ -76,7 +100,7 @@ class WorksController < ApplicationController
 
 # -------------------------------------------------------------------------
   def get_data(keyword)
-    require 'youtube.rb'#先ほど上で準備したファイルを呼ぶ
+    require 'youtube.rb'
     opts = Trollop::options do
       opt :q, 'Search term', :type => String, :default => keyword
       opt :max_results, 'Max results', :type => :int, :default => 25

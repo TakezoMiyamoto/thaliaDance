@@ -43,6 +43,9 @@ gem 'omniauth-google-oauth2'
 
 gem 'dotenv-rails'
 
+# form
+gem 'simple_form'
+
 # youtube API
 gem 'google-api-client', '<0.9'
 gem 'trollop', '~> 2.1'
