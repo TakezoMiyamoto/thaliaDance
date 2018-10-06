@@ -17,9 +17,21 @@
 
 
             <% if @user == current_user %>
-                <%= link_to "プロフィールの編集", edit_user_path(@user), class: "btn btn-large btn-info edit-btn" %>
+                <%= link_to "Edit my Profile", edit_user_path(@user), class: "btn btn-large btn-info edit-btn" %>
+            <% end %>
+            <% if @user == current_user %>
+                <%= link_to "Post New Work", new_work_path, class: "btn btn-large btn-info edit-btn" %>
             <% end %>
 
+
+        </div>
+        <div class="col-md-9 user-profile-projects">
+
+          <% if @works.any? %>
+            <%= render 'works/list' , works: @works %>
+          <% else %>
+            <p>Currently, there is no your work.</p>
+          <% end %>
         </div>
 
     </div>

@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   }
 
   resources :users, except: [:index]
-  
-  get 'works', to: 'works#index'
+
+  resources :works
   get 'works/my_works', to: 'works#my_works'
-  get 'works/new', to: 'works#new'
+
 end

@@ -1,6 +1,12 @@
 // Place all the styles related to the works controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.wrapper {
+  background-color: #FFFFFF;
+  width: auto;
+  height: 1400px;
+  padding: 100px;
+}
 .edit-work {
   border-radius: 10px 5px;
   box-shadow: 1px 2px 3px #444;

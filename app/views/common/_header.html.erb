@@ -11,7 +11,13 @@
       <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav pull-right">
                 <li><%= link_to "What is Thalia？",  root_path  %></li>
+                  <li>
+                    <%= link_to "Works", works_path %>
+                  </li>
                  <% if user_signed_in? %>
+                   <li>
+                    <%= link_to "My Page", user_path(current_user) %>
+                    </li>
                     <li>
                       <%= link_to "My Works", works_my_works_path %>
                     </li>
