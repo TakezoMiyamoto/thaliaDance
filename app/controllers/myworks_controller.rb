@@ -5,9 +5,6 @@ class MyworksController < ApplicationController
 
 
 
-
-
-
 private
 def main
   require 'youtube.rb'
@@ -20,7 +17,8 @@ def main
         :api_method => youtube.channels.list,
         :parameters => {
           :mine => true,
-          :part => 'contentDetails'
+          :part => 'contentDetails',
+          # access_token:
         }
       )
 

@@ -9,7 +9,7 @@ Devise.setup do |config|
                   ENV['GOOGLE_APP_ID'], # 環境変数に先ほど控えたクライアントIDを入れておく
                   ENV['GOOGLE_APP_SECRET'], # 環境変数に先ほど控えたシークレットを入れておく
                   name: :google_oauth2,
-                  scope: %w(email)
+                  scope: "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/youtube"
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.

@@ -1,3 +1,46 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.user-profile {
+  text-align: center;
+  color: #FFFFFF;
+}
+.user-profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+}
+
+.edit-btn {
+  margin-top: 30px;
+}
+
+.project-user-profile {
+    img {
+
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+    }
+}
+
+.user-profile-projects {
+
+    h4 {
+        text-align: center;
+    }
+    p {
+        margin-top: 40px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+}
+
+.edit_profile {
+    border-radius: 10px 5px;
+    box-shadow: 1px 2px 3px #444;
+    background-color: white;
+    padding: 20px;
+}
