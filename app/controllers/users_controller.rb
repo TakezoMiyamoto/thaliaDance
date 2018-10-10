@@ -27,6 +27,8 @@ class UsersController < ApplicationController
     end
   end
 
+  
+
   private
 
   def edit_user_params
