@@ -7,7 +7,6 @@ class User < ApplicationRecord
   has_many :works
 
    def self.find_for_google_oauth2(auth)
-     debugger
        user = User.where(email: auth.info.email).first
        unless user
          user = User.create(name:     auth.info.name,
