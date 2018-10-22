@@ -8,7 +8,7 @@ Devise.setup do |config|
   config.omniauth :google_oauth2,
                   ENV['GOOGLE_APP_ID'], # 環境変数に先ほど控えたクライアントIDを入れておく
                   ENV['GOOGLE_APP_SECRET'], # 環境変数に先ほど控えたシークレットを入れておく
-                  name: :google_oauth2,
+                  provider_ignores_state: true,
                   scope: "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/youtube"
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
