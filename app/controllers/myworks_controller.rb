@@ -4,6 +4,7 @@ class MyworksController < ApplicationController
   end
 
   def google
+    
     res = request.env['omniauth.auth']
 
 

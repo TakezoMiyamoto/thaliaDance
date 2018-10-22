@@ -5,6 +5,7 @@ class WorksController < ApplicationController
      @works = Work.order(created_at: :desc)
      @title = 'ワークス一覧'
     end
+    
 
     def show
      @work = Work.find(params[:id])

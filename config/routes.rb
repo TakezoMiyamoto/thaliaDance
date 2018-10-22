@@ -5,10 +5,13 @@ Rails.application.routes.draw do
       :omniauth_callbacks => "users/omniauth_callbacks",
   }
 
+  get '/auth/:provider/callback', to: 'users#google'
+
   resources :users, except: [:index]
 
   resources :works
 
   get 'myworks/index', to: 'myworks#index'
-  get 'works/google', to: 'works#google'
+  get 'myworks/google', to: 'myworks#google'
+
 end
