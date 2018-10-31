@@ -1,4 +1,3 @@
-
 <% content_for :head do %>
   <meta name="title" content="<%=@work.title %>の編集">
   <meta name="description" content="<%=@work.title %>の編集">
@@ -6,15 +5,16 @@
 
 <div class="row">
   <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 edit-work">
-  <h3 style="text-align: center;">Create you own Work!!</h3>
+  <h3 style="text-align: center;">Edit your own Work!!</h3>
     <%= simple_form_for(@work) do |f| %>
     <!-- error messages -->
     <%= f.error_notification %>
 
       <%= f.input :title, :input_html => { :class => 'form-control' } , label: 'Work Title' ,error: 'ワークは必須です。', :placeholder => "(ex) My second locking choreography" %><br/>
 
-      <%= f.input :youtube_url, as: :url, label: 'Youtube動画 URL', :input_html => { :class => 'form-control' } , :placeholder => "https://www.youtube.com/watch?v=xxxxxxxxxxx" %></br>
-
+      <!-- <%= f.input :youtube_url, as: :url, label: 'Youtube動画 URL', :input_html => { :class => 'form-control' } , :placeholder => "https://www.youtube.com/watch?v=xxxxxxxxxxx" %></br> -->
+      <%= f.label :video, "Video Work",  class: 'control-label' %>
+      <%= f.file_field :video,  :accept => 'video/*' %><br/>
       <%= f.label :description, "Description",  class: 'control-label' %>
       <%= f.text_area :description, class: 'form-control' %><br/>
       <%= f.submit "更新する！", class: "btn btn-large btn-primary form-control" %>

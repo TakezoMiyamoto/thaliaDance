@@ -41,6 +41,15 @@ gem 'omniauth-google-oauth2'
 
 gem 'dotenv-rails'
 
+# for image uploader with AWS S3
+gem 'carrierwave'
+gem 'fog'
+gem 'mini_magick'
+
+# screenshot
+gem 'streamio-ffmpeg'
+gem 'video_thumbnailer'
+
 # form
 gem 'simple_form'
 

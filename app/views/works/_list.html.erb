@@ -4,11 +4,9 @@
       <div class="item-box">
         <div class="image">
           <div class="img-wrap">
-            <% if work.youtube_url == nil  %>
-              <%= link_to image_tag("/images/no-image.png"), work %>
-            <% else %>
-              <%= link_to imaged(work.youtube_url), work %>
-            <% end %>
+
+            <%= link_to image_tag(work.video_url(:screenshot).to_s, id: "video", :alt => "screenshot"), work %>
+
           </div>
         </div>
         <div class="detail">
