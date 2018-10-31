@@ -3,7 +3,7 @@ require "net/http"
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def google_oauth2
-    debugger
+    
     @user = User.find_for_google_oauth2(request.env["omniauth.auth"])
 
      if @user.persisted?

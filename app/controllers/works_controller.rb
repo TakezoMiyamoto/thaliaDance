@@ -4,7 +4,7 @@ class WorksController < ApplicationController
   def index
      @works = Work.order(created_at: :desc)
      @title = 'ワークス一覧'
-    end
+  end
 
 
     def show
@@ -30,15 +30,19 @@ class WorksController < ApplicationController
      @work = Work.find(params[:id])
     end
 
-    def update
-     @work = Work.find(params[:id])
-     if @work.update(edit_work_params)
-       flash[:success] = 'ワーク内容が更新されました。'
-       redirect_to @work
-     else
-       render 'edit'
-     end
+  def update
+    respond_to do |format|
+      if @work.update(edit_work_params) && @work.video.recreate_versions!
+        format.html { redirect_to @work, notice: 'ワーク内容が更新されました。' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @work.errors, status: :unprocessable_entity }
+      end
     end
+  end
+
+
 
     def destroy
      @work = current_user.works.find_by(id: params[:id])
